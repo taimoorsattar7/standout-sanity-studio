@@ -29,6 +29,11 @@ export default {
       name: "password",
       type: "string",
     },
+    {
+      title: "customer ID",
+      name: "cusid",
+      type: "string",
+    },
   ],
   preview: {
     select: {

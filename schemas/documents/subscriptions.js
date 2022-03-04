@@ -1,6 +1,8 @@
 import React from 'react'
 import { MdSubscriptions } from 'react-icons/md'
 
+import { format } from 'date-fns'
+
 export default {
   name: "subscriptions",
   title: "Subscriptions",
@@ -68,12 +70,12 @@ export default {
   ],
   preview: {
     select: {
-      title0: 'title',
-      date0: 'start_date',
+      title: 'title',
+      start_date: 'start_date',
       status: 'status'
     },
-    prepare: ({title0, date0, status}) => {
-      let isDatePass = "Today Date is greater than Date One."
+    prepare: ({title, start_date, status}) => {
+      let previewData = format(new Date(start_date), 'MMMM yyyy')
       const EMOJIS = {
         active: '✅',
         pending: '🎫',
@@ -84,10 +86,9 @@ export default {
         past_due: '👀',
         unpaid: '😶'
       }
-
       return {
-        isDatePass,
-        subtitle: `${status}, Subscribed on  ${date0}`,
+        title,
+        subtitle: `${status}, Subscribed on  ${previewData}`,
         media: <span style={{fontSize: '1.5rem'}}>
                   {status ? EMOJIS[status] : '🎫'}
                 </span>
@@ -95,16 +96,3 @@ export default {
     }
   }
 };
-
-
-function compareDate(dateString) {    
-  
-  return "Today Date is greater than Date One.";
-  // var todayDate = new Date(); //Today Date    
-  // var dateOne = new Date(dateString);    
-  // if (todayDate > dateOne) {    
-  //      return "Today Date is greater than Date One.";    
-  //  }else {    
-  //      return "Today Date is greater than Date One.";    
-  //  }    
-}

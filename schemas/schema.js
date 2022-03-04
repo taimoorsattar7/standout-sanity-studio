@@ -5,17 +5,15 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 
 // We import object and document schemas
 import product from "./documents/product";
-import customer from "./documents/customer";
 import price from "./documents/price";
-import subscriptions from "./documents/subscriptions";
 import content from "./documents/content";
+import customer from "./documents/customer";
+import subscriptions from "./documents/subscriptions";
 
-import localeString from "./locale/String";
-import localeText from "./locale/Text";
 
-import bodyPortableText from "./objects/bodyPortableText";
-import mainImage from "./objects/mainImage";
 import localfile from "./objects/localfile";
+import mainImage from "./objects/mainImage";
+import bodyPortableText from "./objects/bodyPortableText";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,15 +26,13 @@ export default createSchema({
     // in the studio.
     product,
     price,
-    subscriptions,
     customer,
     content,
+    subscriptions,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
-    localeText,
     bodyPortableText,
     mainImage,
-    localeString,
     localfile
   ]),
 });

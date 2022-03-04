@@ -37,19 +37,6 @@ export default {
       to: [{ type: "price" }],
     },
     {
-      title: "Tags",
-      name: "tags",
-      type: "array",
-      of: [
-        {
-          type: "string",
-        },
-      ],
-      options: {
-        layout: "tags",
-      },
-    },
-    {
       name: "body",
       title: "Body",
       type: "bodyPortableText",
