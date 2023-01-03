@@ -1,5 +1,5 @@
 {
-  "name": "anitydashboardshop",
+  "name": "standoutstudio",
   "private": true,
   "version": "1.0.0",
   "description": "",
@@ -9,7 +9,6 @@
   "scripts": {
     "start": "sanity start",
     "build": "sanity build",
-    "dev": "sanity start",
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
     "graphql-deploy": "sanity graphql deploy --playground",
     "lint": "eslint .",
@@ -32,9 +31,7 @@
     "generate-password": "^1.7.0",
     "prop-types": "^15.7",
     "react": "^17.0.2",
-    "react-barcode": "^1.3.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "styled-components": "^5.3.3"
+    "react-icons": "^4.3.1"
   }
 }
